@@ -1,0 +1,18 @@
+# # examples/grpo_trainer/config/attack_or_grpo.yaml llama3-7b
+# defaults:
+#   - ppo_trainer
+#   - _self_
+
+# actor_rollout_ref:
+#   model:
+#     custom_chat_template: "{% for message in messages %}{% if message[\"role\"] == \"user\" %}<|user|>\n{{ message[\"content\"] }}<|end|>\n{% elif message[\"role\"] == \"assistant\" %}<|assistant|>\n{{ message[\"content\"] }}<|end|>\n{% endif %}{% endfor %}{% if add_generation_prompt %}<|assistant|>\n{% endif %}"
+
+
+# examples/grpo_trainer/config/attack_or_grpo.yaml
+defaults:
+  - ppo_trainer
+  - _self_
+
+actor_rollout_ref:
+  model:
+    custom_chat_template: "{% for message in messages %}<|im_start|>{{ message['role'] }}\n{{ message['content'] }}<|im_end|>\n{% endfor %}{% if add_generation_prompt %}<|im_start|>assistant\n{% endif %}"

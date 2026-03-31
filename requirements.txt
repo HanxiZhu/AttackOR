@@ -1,0 +1,66 @@
+# requirements.txt for Attack_OR project
+# Combined from ORLM and verl projects
+
+# Core ML frameworks
+torch
+transformers<5.0.0
+accelerate
+peft
+datasets
+deepspeed
+
+# verl dependencies
+ray[default]
+hydra-core
+tensordict>=0.8.0,<=0.10.0,!=0.9.0
+torchdata
+liger-kernel
+
+# vLLM for inference
+vllm>=0.3.2
+
+# OpenAI API
+openai>=1.0.0
+
+# Data processing
+numpy<2.0.0
+pandas
+pyarrow>=19.0.0
+dill
+
+# Evaluation and logging
+wandb
+tensorboard
+evaluate
+rouge_score
+
+# Math related
+latex2sympy2_extended
+math_verify
+
+# OR solver
+coptpy
+
+# Utilities
+tqdm
+jsonlines
+termcolor
+einops
+fire
+scikit-learn
+scipy
+packaging>=20.0
+sentencepiece
+tiktoken
+protobuf
+tokenizers
+uvicorn
+fastapi
+pylatexenc
+pybind11
+codetiming
+
+# Optional
+gradio
+jupyterlab
+auto-gptq

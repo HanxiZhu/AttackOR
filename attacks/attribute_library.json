@@ -1,0 +1,1004 @@
+{
+  "categories": {
+    "production": {
+      "description": "Production and manufacturing problems involving factories, workers, production planning, resource allocation for making products, and industrial processes.",
+      "entities": {
+        "factory": {
+          "description": "工厂",
+          "attributes": [
+            {
+              "name": "energy efficiency rating",
+              "description": "能源效率评级",
+              "unit": "rating",
+              "example_usage": "Each factory is assigned an energy efficiency rating"
+            },
+            {
+              "name": "environmental compliance certification",
+              "description": "环境合规认证",
+              "unit": "certification",
+              "example_usage": "Each factory must obtain environmental compliance certification"
+            },
+            {
+              "name": "automation level",
+              "description": "自动化水平",
+              "unit": "level",
+              "example_usage": "The automation level of each factory influences production costs"
+            },
+            {
+              "name": "labor skill certification rate",
+              "description": "劳动力技能认证率",
+              "unit": "percentage",
+              "example_usage": "Each factory's labor skill certification rate affects quality control"
+            },
+            {
+              "name": "maintenance certification status",
+              "description": "维护认证状态",
+              "unit": "status",
+              "example_usage": "Each factory requires maintenance certification status for equipment"
+            }
+          ]
+        },
+        "company": {
+          "description": "公司",
+          "attributes": [
+            {
+              "name": "environmental compliance rating",
+              "description": "环境合规评级",
+              "unit": "rating",
+              "example_usage": "Each company has an environmental compliance rating"
+            },
+            {
+              "name": "employee training hours per year",
+              "description": "员工年培训小时数",
+              "unit": "hours",
+              "example_usage": "Each company requires employee training hours per year"
+            },
+            {
+              "name": "equipment age average",
+              "description": "设备平均年龄",
+              "unit": "years",
+              "example_usage": "Each company has an equipment age average"
+            },
+            {
+              "name": "waste reduction percentage",
+              "description": "废物减少百分比",
+              "unit": "percentage",
+              "example_usage": "Each company maintains a waste reduction percentage"
+            },
+            {
+              "name": "supply chain reliability score",
+              "description": "供应链可靠性评分",
+              "unit": "score",
+              "example_usage": "Each company is assessed on supply chain reliability score"
+            }
+          ]
+        },
+        "product": {
+          "description": "产品",
+          "attributes": [
+            {
+              "name": "weight",
+              "description": "重量",
+              "unit": "kg",
+              "example_usage": "Each product has a designated weight"
+            },
+            {
+              "name": "volume",
+              "description": "体积",
+              "unit": "cubic meters",
+              "example_usage": "Each product occupies a certain volume in storage"
+            },
+            {
+              "name": "production time",
+              "description": "生产时间",
+              "unit": "hours",
+              "example_usage": "Each product requires a specific production time"
+            },
+            {
+              "name": "environmental impact score",
+              "description": "环境影响评分",
+              "unit": "score",
+              "example_usage": "Each product has an environmental impact score based on emissions"
+            },
+            {
+              "name": "regulatory compliance code",
+              "description": "法规符合性代码",
+              "unit": "code",
+              "example_usage": "Each product must have a regulatory compliance code"
+            }
+          ]
+        },
+        "worker": {
+          "description": "工人",
+          "attributes": [
+            {
+              "name": "equipment operation certification",
+              "description": "设备操作认证",
+              "unit": "certification",
+              "example_usage": "Each worker must possess an equipment operation certification"
+            },
+            {
+              "name": "years of experience",
+              "description": "工作经验年数",
+              "unit": "years",
+              "example_usage": "Each worker's years of experience are considered for task assignment"
+            },
+            {
+              "name": "training hours completed",
+              "description": "已完成培训小时数",
+              "unit": "hours",
+              "example_usage": "Each worker has a record of training hours completed"
+            },
+            {
+              "name": "language proficiency level",
+              "description": "语言熟练度等级",
+              "unit": "level",
+              "example_usage": "Each worker's language proficiency level is evaluated for team coordination"
+            }
+          ]
+        },
+        "equipment": {
+          "description": "设备",
+          "attributes": [
+            {
+              "name": "maintenance frequency",
+              "description": "维护频率",
+              "unit": "frequency",
+              "example_usage": "Each equipment has a specified maintenance frequency"
+            },
+            {
+              "name": "energy consumption rate",
+              "description": "能耗率",
+              "unit": "rate",
+              "example_usage": "Each equipment operates at a certain energy consumption rate"
+            },
+            {
+              "name": "production capacity",
+              "description": "生产能力",
+              "unit": "capacity",
+              "example_usage": "Each equipment has a defined production capacity"
+            },
+            {
+              "name": "operational temperature range",
+              "description": "操作温度范围",
+              "unit": "range",
+              "example_usage": "Each equipment must operate within its operational temperature range"
+            }
+          ]
+        },
+        "raw material": {
+          "description": "原材料",
+          "attributes": [
+            {
+              "name": "moisture content",
+              "description": "水分含量",
+              "unit": "percentage",
+              "example_usage": "Each raw material unit must have moisture content within specified limits."
+            },
+            {
+              "name": "purity percentage",
+              "description": "纯度百分比",
+              "unit": "percentage",
+              "example_usage": "Each raw material batch requires a minimum purity percentage."
+            },
+            {
+              "name": "shelf life remaining",
+              "description": "剩余保质期",
+              "unit": "days",
+              "example_usage": "Each raw material must have a shelf life remaining above a critical threshold."
+            },
+            {
+              "name": "carbon footprint per unit",
+              "description": "单位碳足迹",
+              "unit": "kg CO2e",
+              "example_usage": "Each raw material unit has an associated carbon footprint that must be considered."
+            }
+          ]
+        }
+      },
+      "generic_attributes": [
+        {
+          "name": "quality standard",
+          "description": "质量标准",
+          "unit": "standard",
+          "example_usage": "Each entity must meet quality standard requirements"
+        },
+        {
+          "name": "production efficiency",
+          "description": "生产效率",
+          "unit": "percentage",
+          "example_usage": "Each entity's production efficiency is measured as a percentage of optimal output"
+        },
+        {
+          "name": "safety compliance",
+          "description": "安全合规",
+          "unit": "level",
+          "example_usage": "Each entity must adhere to safety compliance levels set by regulations"
+        }
+      ]
+    },
+    "transportation": {
+      "description": "Transportation and logistics problems involving trucks, warehouses, ports, shipping, vehicle routing, distribution, and supply chain management.",
+      "entities": {
+        "vehicle": {
+          "description": "车辆",
+          "attributes": [
+            {
+              "name": "load capacity",
+              "description": "载重能力",
+              "unit": "tons",
+              "example_usage": "Each vehicle has a maximum load capacity that cannot be exceeded."
+            },
+            {
+              "name": "fuel efficiency",
+              "description": "燃油效率",
+              "unit": "km/l",
+              "example_usage": "The fuel efficiency of each vehicle determines fuel consumption costs."
+            },
+            {
+              "name": "emission standard compliance",
+              "description": "排放标准符合性",
+              "unit": "standard level",
+              "example_usage": "Each vehicle must comply with a specific emission standard level."
+            },
+            {
+              "name": "vehicle age",
+              "description": "车辆年龄",
+              "unit": "years",
+              "example_usage": "The age of each vehicle affects its maintenance schedule and operational reliability."
+            },
+            {
+              "name": "insurance coverage level",
+              "description": "保险覆盖等级",
+              "unit": "level",
+              "example_usage": "Each vehicle requires a minimum insurance coverage level for legal operation."
+            }
+          ]
+        },
+        "warehouse": {
+          "description": "仓库",
+          "attributes": [
+            {
+              "name": "automation level",
+              "description": "自动化水平",
+              "unit": "level",
+              "example_usage": "Each warehouse has an automation level that affects operational efficiency."
+            },
+            {
+              "name": "energy consumption rating",
+              "description": "能耗评级",
+              "unit": "rating",
+              "example_usage": "The energy consumption rating of each warehouse must be considered for sustainability goals."
+            },
+            {
+              "name": "floor load capacity",
+              "description": "地面承载能力",
+              "unit": "kg/m²",
+              "example_usage": "Warehouse selection depends on floor load capacity for heavy goods storage."
+            },
+            {
+              "name": "insurance cost factor",
+              "description": "保险成本系数",
+              "unit": "factor",
+              "example_usage": "Optimization models include insurance cost factor per warehouse."
+            },
+            {
+              "name": "proximity to major highway",
+              "description": "距主要高速公路距离",
+              "unit": "km",
+              "example_usage": "Each warehouse's proximity to major highway influences transportation time and cost."
+            }
+          ]
+        },
+        "distribution center": {
+          "description": "配送中心",
+          "attributes": [
+            {
+              "name": "storage capacity",
+              "description": "存储容量",
+              "unit": "square meters",
+              "example_usage": "Each distribution center has a storage capacity limit."
+            },
+            {
+              "name": "daily throughput capacity",
+              "description": "日吞吐能力",
+              "unit": "pallets per day",
+              "example_usage": "Each distribution center operates within its daily throughput capacity."
+            },
+            {
+              "name": "labor availability",
+              "description": "劳动力可用性",
+              "unit": "workers per shift",
+              "example_usage": "Each distribution center has a specific labor availability for operations."
+            },
+            {
+              "name": "automation level",
+              "description": "自动化水平",
+              "unit": "level",
+              "example_usage": "The automation level of each distribution center affects processing speed."
+            },
+            {
+              "name": "environmental compliance rating",
+              "description": "环境合规评级",
+              "unit": "rating",
+              "example_usage": "Each distribution center must meet an environmental compliance rating."
+            }
+          ]
+        },
+        "retail store": {
+          "description": "零售店",
+          "attributes": [
+            {
+              "name": "inventory capacity",
+              "description": "库存容量",
+              "unit": "units",
+              "example_usage": "Each retail store has a specific inventory capacity that limits stock levels."
+            },
+            {
+              "name": "delivery frequency",
+              "description": "配送频率",
+              "unit": "deliveries per week",
+              "example_usage": "Each retail store requires a specific delivery frequency to maintain stock."
+            },
+            {
+              "name": "parking availability",
+              "description": "停车位可用性",
+              "unit": "number of spaces",
+              "example_usage": "Each retail store has a certain parking availability for delivery vehicles."
+            },
+            {
+              "name": "operating hours",
+              "description": "营业时间",
+              "unit": "hours of operation",
+              "example_usage": "Each retail store has specific operating hours that affect delivery scheduling."
+            }
+          ]
+        },
+        "city": {
+          "description": "城市",
+          "attributes": [
+            {
+              "name": "population density",
+              "description": "人口密度",
+              "unit": "people per km²",
+              "example_usage": "Each city's population density affects transportation demand modeling."
+            },
+            {
+              "name": "traffic congestion index",
+              "description": "交通拥堵指数",
+              "unit": "index",
+              "example_usage": "The traffic congestion index for each city influences delivery time constraints."
+            },
+            {
+              "name": "public transportation coverage rate",
+              "description": "公共交通覆盖率",
+              "unit": "percentage",
+              "example_usage": "Public transportation coverage rate in each city impacts last-mile logistics planning."
+            },
+            {
+              "name": "fuel tax rate",
+              "description": "燃油税率",
+              "unit": "percentage",
+              "example_usage": "Fuel tax rate per city must be accounted for in cost optimization."
+            },
+            {
+              "name": "emission standards compliance level",
+              "description": "排放标准合规等级",
+              "unit": "level",
+              "example_usage": "Each city has an emission standards compliance level affecting vehicle eligibility."
+            }
+          ]
+        }
+      },
+      "generic_attributes": [
+        {
+          "name": "safety compliance level",
+          "description": "安全合规等级",
+          "unit": "compliance level",
+          "example_usage": "Each entity must maintain a minimum safety compliance level"
+        },
+        {
+          "name": "maintenance interval",
+          "description": "维护间隔",
+          "unit": "time period",
+          "example_usage": "Each entity has a defined maintenance interval for scheduled upkeep"
+        },
+        {
+          "name": "operational availability",
+          "description": "运营可用性",
+          "unit": "percentage",
+          "example_usage": "Each entity is monitored for its operational availability to ensure service reliability"
+        }
+      ]
+    },
+    "investment": {
+      "description": "Financial investment problems involving portfolio allocation, fund management, investment planning over time, and capital budgeting.",
+      "entities": {
+        "investor": {
+          "description": "投资者",
+          "attributes": [
+            {
+              "name": "accreditation status",
+              "description": "认证状态",
+              "unit": "status",
+              "example_usage": "Each investor must have accreditation status"
+            },
+            {
+              "name": "risk appetite score",
+              "description": "风险承受能力评分",
+              "unit": "score",
+              "example_usage": "Each investor has a risk appetite score"
+            },
+            {
+              "name": "minimum investment amount",
+              "description": "最低投资金额",
+              "unit": "USD",
+              "example_usage": "Each investor must meet a minimum investment amount"
+            },
+            {
+              "name": "investment experience years",
+              "description": "投资经验年数",
+              "unit": "years",
+              "example_usage": "Each investor's investment experience years are considered"
+            },
+            {
+              "name": "compliance certification",
+              "description": "合规认证",
+              "unit": "certification",
+              "example_usage": "Each investor requires compliance certification"
+            }
+          ]
+        },
+        "investment project": {
+          "description": "投资项目",
+          "attributes": [
+            {
+              "name": "environmental compliance rating",
+              "description": "环境合规评级",
+              "unit": "rating",
+              "example_usage": "Each investment project must achieve a minimum environmental compliance rating"
+            },
+            {
+              "name": "technology innovation index",
+              "description": "技术创新指数",
+              "unit": "index",
+              "example_usage": "Each investment project is evaluated based on its technology innovation index"
+            },
+            {
+              "name": "social impact assessment score",
+              "description": "社会影响评估得分",
+              "unit": "score",
+              "example_usage": "Each investment project requires a social impact assessment score"
+            },
+            {
+              "name": "risk maturity level",
+              "description": "风险成熟度等级",
+              "unit": "level",
+              "example_usage": "Each investment project must assess its risk maturity level"
+            },
+            {
+              "name": "resource utilization efficiency",
+              "description": "资源利用效率",
+              "unit": "percentage",
+              "example_usage": "Each investment project aims to improve resource utilization efficiency"
+            }
+          ]
+        },
+        "investment fund": {
+          "description": "投资基金",
+          "attributes": [
+            {
+              "name": "management fee rate",
+              "description": "管理费率",
+              "unit": "percentage",
+              "example_usage": "Each investment fund has a management fee rate charged annually."
+            },
+            {
+              "name": "minimum investment threshold",
+              "description": "最低投资门槛",
+              "unit": "currency",
+              "example_usage": "Each investment fund requires a minimum investment threshold."
+            },
+            {
+              "name": "risk assessment score",
+              "description": "风险评估分数",
+              "unit": "score",
+              "example_usage": "Each investment fund is assigned a risk assessment score."
+            },
+            {
+              "name": "liquidity period",
+              "description": "流动性期限",
+              "unit": "days",
+              "example_usage": "Each investment fund has a liquidity period for redemptions."
+            },
+            {
+              "name": "regulatory compliance certification",
+              "description": "监管合规认证",
+              "unit": "certification",
+              "example_usage": "Each investment fund must hold a regulatory compliance certification."
+            }
+          ]
+        }
+      },
+      "generic_attributes": [
+        {
+          "name": "risk level",
+          "description": "风险等级",
+          "unit": "rating",
+          "example_usage": "Each entity is assessed for its risk level to inform investment suitability."
+        },
+        {
+          "name": "expected return",
+          "description": "预期回报",
+          "unit": "percentage",
+          "example_usage": "Each entity has an expected return used in portfolio optimization."
+        },
+        {
+          "name": "liquidity measure",
+          "description": "流动性度量",
+          "unit": "days",
+          "example_usage": "Each entity's liquidity measure indicates the time to convert to cash without significant loss."
+        }
+      ]
+    },
+    "scheduling": {
+      "description": "Scheduling problems involving shift planning, task assignment, project scheduling, time management, and workforce allocation.",
+      "entities": {
+        "vehicle": {
+          "description": "车辆",
+          "attributes": [
+            {
+              "name": "emission standard compliance",
+              "description": "排放标准符合性",
+              "unit": "standard",
+              "example_usage": "Each vehicle must meet an emission standard compliance"
+            },
+            {
+              "name": "insurance coverage level",
+              "description": "保险覆盖等级",
+              "unit": "level",
+              "example_usage": "Each vehicle has an insurance coverage level"
+            },
+            {
+              "name": "regular inspection due date",
+              "description": "定期检查到期日",
+              "unit": "date",
+              "example_usage": "Each vehicle's regular inspection due date must be considered"
+            },
+            {
+              "name": "GPS tracking capability",
+              "description": "GPS跟踪能力",
+              "unit": "capability",
+              "example_usage": "Each vehicle requires GPS tracking capability for monitoring"
+            },
+            {
+              "name": "telematics system version",
+              "description": "远程信息处理系统版本",
+              "unit": "version",
+              "example_usage": "Each vehicle is assigned a telematics system version"
+            }
+          ]
+        },
+        "worker": {
+          "description": "员工",
+          "attributes": [
+            {
+              "name": "skill proficiency level",
+              "description": "技能熟练等级",
+              "unit": "level",
+              "example_usage": "Each worker's skill proficiency level determines task eligibility."
+            },
+            {
+              "name": "years of experience",
+              "description": "工作经验年数",
+              "unit": "years",
+              "example_usage": "Workers are assigned based on their years of experience."
+            },
+            {
+              "name": "hourly wage",
+              "description": "时薪",
+              "unit": "currency",
+              "example_usage": "The total labor cost is calculated using each worker's hourly wage."
+            },
+            {
+              "name": "maximum weekly hours",
+              "description": "每周最大工作时间",
+              "unit": "hours",
+              "example_usage": "Schedules must comply with each worker's maximum weekly hours."
+            },
+            {
+              "name": "equipment certification status",
+              "description": "设备操作认证状态",
+              "unit": "status",
+              "example_usage": "Tasks requiring machinery need workers with equipment certification status."
+            }
+          ]
+        },
+        "task": {
+          "description": "任务",
+          "attributes": [
+            {
+              "name": "skill requirement",
+              "description": "技能要求",
+              "unit": "skill type",
+              "example_usage": "Each task requires a specific skill requirement"
+            },
+            {
+              "name": "deadline",
+              "description": "截止时间",
+              "unit": "time unit",
+              "example_usage": "Each task has a deadline that must be met"
+            },
+            {
+              "name": "priority level",
+              "description": "优先级等级",
+              "unit": "level",
+              "example_usage": "Each task is assigned a priority level"
+            },
+            {
+              "name": "resource consumption",
+              "description": "资源消耗",
+              "unit": "resource unit",
+              "example_usage": "Each task has a resource consumption that affects overall usage"
+            },
+            {
+              "name": "setup time",
+              "description": "准备时间",
+              "unit": "time unit",
+              "example_usage": "Each task incurs a setup time before it can start"
+            }
+          ]
+        },
+        "team": {
+          "description": "团队",
+          "attributes": [
+            {
+              "name": "industry certification level",
+              "description": "行业认证等级",
+              "unit": "level",
+              "example_usage": "Each team must possess an industry certification level"
+            },
+            {
+              "name": "maximum weekly working hours",
+              "description": "最大周工作时间",
+              "unit": "hours",
+              "example_usage": "Each team has a maximum weekly working hours constraint"
+            },
+            {
+              "name": "specialization area",
+              "description": "专业领域",
+              "unit": "category",
+              "example_usage": "Each team is assigned a specialization area"
+            },
+            {
+              "name": "tool proficiency score",
+              "description": "工具熟练度评分",
+              "unit": "score",
+              "example_usage": "Each team has a tool proficiency score for software tools"
+            }
+          ]
+        },
+        "activity": {
+          "description": "活动",
+          "attributes": [
+            {
+              "name": "skill level requirement",
+              "description": "技能等级要求",
+              "unit": "level",
+              "example_usage": "Each activity requires a specific skill level for assigned workers"
+            },
+            {
+              "name": "environmental impact rating",
+              "description": "环境影响评级",
+              "unit": "rating",
+              "example_usage": "Each activity has an environmental impact rating that affects compliance"
+            },
+            {
+              "name": "client priority score",
+              "description": "客户优先级分数",
+              "unit": "score",
+              "example_usage": "Each activity is assigned a client priority score based on contractual terms"
+            },
+            {
+              "name": "regulatory compliance status",
+              "description": "法规合规状态",
+              "unit": "status",
+              "example_usage": "Each activity must have a regulatory compliance status verified before scheduling"
+            }
+          ]
+        }
+      },
+      "generic_attributes": [
+        {
+          "name": "duration",
+          "description": "持续时间",
+          "unit": "time unit (e.g., hours, minutes)",
+          "example_usage": "Each task must have a duration specified for scheduling"
+        },
+        {
+          "name": "priority",
+          "description": "优先级",
+          "unit": "level (e.g., 1-5)",
+          "example_usage": "Tasks with higher priority should be scheduled earlier"
+        },
+        {
+          "name": "cost",
+          "description": "成本",
+          "unit": "currency unit (e.g., dollars)",
+          "example_usage": "Each resource has an associated cost per time unit"
+        }
+      ]
+    },
+    "diet_nutrition": {
+      "description": "Diet and nutrition problems involving meal planning, food selection, meeting nutritional requirements, and cost-effective dietary optimization.",
+      "entities": {
+        "food": {
+          "description": "食品",
+          "attributes": [
+            {
+              "name": "nutritional density score",
+              "description": "营养密度评分",
+              "unit": "score",
+              "example_usage": "Each food is assigned a nutritional density score."
+            },
+            {
+              "name": "food miles",
+              "description": "食物里程",
+              "unit": "kilometers",
+              "example_usage": "Each food has associated food miles."
+            },
+            {
+              "name": "allergen risk level",
+              "description": "过敏原风险等级",
+              "unit": "level",
+              "example_usage": "Each food must be evaluated for allergen risk level."
+            },
+            {
+              "name": "preservative content",
+              "description": "防腐剂含量",
+              "unit": "percentage",
+              "example_usage": "Each food has a specified preservative content."
+            },
+            {
+              "name": "organic certification status",
+              "description": "有机认证状态",
+              "unit": "status",
+              "example_usage": "Each food requires organic certification status."
+            }
+          ]
+        },
+        "nutrient": {
+          "description": "营养素",
+          "attributes": [
+            {
+              "name": "unit cost",
+              "description": "单位成本",
+              "unit": "货币单位",
+              "example_usage": "每个营养素都有单位成本，需在优化中考虑。"
+            },
+            {
+              "name": "bioavailability",
+              "description": "生物利用度",
+              "unit": "百分比",
+              "example_usage": "每个营养素的生物利用度影响其有效性。"
+            },
+            {
+              "name": "purity level",
+              "description": "纯度等级",
+              "unit": "百分比",
+              "example_usage": "每个营养素必须满足纯度等级要求。"
+            },
+            {
+              "name": "storage stability",
+              "description": "储存稳定性",
+              "unit": "保质期（月）",
+              "example_usage": "每个营养素的储存稳定性决定了存储条件。"
+            },
+            {
+              "name": "allergen risk level",
+              "description": "过敏原风险等级",
+              "unit": "风险等级",
+              "example_usage": "每个营养素需评估过敏原风险等级。"
+            }
+          ]
+        }
+      },
+      "generic_attributes": [
+        {
+          "name": "energy content",
+          "description": "能量含量",
+          "unit": "kilocalories per 100g",
+          "example_usage": "Each entity specifies energy content per 100 grams"
+        },
+        {
+          "name": "protein content",
+          "description": "蛋白质含量",
+          "unit": "grams per 100g",
+          "example_usage": "Each entity indicates protein content per 100 grams"
+        },
+        {
+          "name": "daily value percentage",
+          "description": "每日所需百分比",
+          "unit": "percent",
+          "example_usage": "Each entity shows daily value percentage per serving"
+        }
+      ]
+    },
+    "resource_allocation": {
+      "description": "Resource allocation problems involving distribution of workers, materials, funds, or other resources across various activities, departments, or projects.",
+      "entities": {
+        "company": {
+          "description": "An organization that allocates resources for production, services, or projects.",
+          "attributes": [
+            {
+              "name": "employee expertise score",
+              "description": "员工专业技能评分",
+              "unit": "score",
+              "example_usage": "Each company has an employee expertise score"
+            },
+            {
+              "name": "environmental compliance rating",
+              "description": "环境合规评级",
+              "unit": "rating",
+              "example_usage": "Each company maintains an environmental compliance rating"
+            },
+            {
+              "name": "technology adoption index",
+              "description": "技术采用指数",
+              "unit": "index",
+              "example_usage": "Each company is assessed by a technology adoption index"
+            },
+            {
+              "name": "maintenance compliance rate",
+              "description": "维护合规率",
+              "unit": "percentage",
+              "example_usage": "Each company has a maintenance compliance rate"
+            }
+          ]
+        },
+        "project": {
+          "description": "A planned endeavor with specific goals that requires resource allocation.",
+          "attributes": [
+            {
+              "name": "environmental impact rating",
+              "description": "环境影响评级",
+              "unit": "rating",
+              "example_usage": "Each project must report its environmental impact rating"
+            },
+            {
+              "name": "technology readiness level",
+              "description": "技术成熟度等级",
+              "unit": "level",
+              "example_usage": "Each project is evaluated based on technology readiness level"
+            },
+            {
+              "name": "stakeholder approval status",
+              "description": "利益相关方批准状态",
+              "unit": "status",
+              "example_usage": "Each project requires stakeholder approval status before commencement"
+            },
+            {
+              "name": "risk assessment score",
+              "description": "风险评估分数",
+              "unit": "score",
+              "example_usage": "Each project is associated with a risk assessment score"
+            }
+          ]
+        },
+        "manager": {
+          "description": "A person responsible for planning and allocating resources.",
+          "attributes": [
+            {
+              "name": "project management certification",
+              "description": "项目管理认证",
+              "unit": "certification",
+              "example_usage": "Each manager must possess a project management certification"
+            },
+            {
+              "name": "years of experience",
+              "description": "工作经验年数",
+              "unit": "years",
+              "example_usage": "Each manager has a defined number of years of experience"
+            },
+            {
+              "name": "team leadership score",
+              "description": "团队领导力评分",
+              "unit": "score",
+              "example_usage": "Each manager is evaluated based on a team leadership score"
+            },
+            {
+              "name": "resource allocation efficiency",
+              "description": "资源分配效率",
+              "unit": "percentage",
+              "example_usage": "Each manager has a measured resource allocation efficiency"
+            }
+          ]
+        },
+        "department": {
+          "description": "A division within an organization that receives allocated resources.",
+          "attributes": [
+            {
+              "name": "employee skill level",
+              "description": "员工技能水平",
+              "unit": "level",
+              "example_usage": "Each department must maintain a minimum employee skill level"
+            },
+            {
+              "name": "production capacity",
+              "description": "生产能力",
+              "unit": "units per day",
+              "example_usage": "Each department has a specific production capacity"
+            },
+            {
+              "name": "compliance score",
+              "description": "合规评分",
+              "unit": "score",
+              "example_usage": "Each department must achieve a minimum compliance score"
+            },
+            {
+              "name": "energy efficiency rating",
+              "description": "能源效率评级",
+              "unit": "rating",
+              "example_usage": "Each department is assessed based on its energy efficiency rating"
+            }
+          ]
+        },
+        "resource": {
+          "description": "Assets such as funds, manpower, materials, or time that are distributed.",
+          "attributes": [
+            {
+              "name": "skill proficiency level",
+              "description": "技能熟练等级",
+              "unit": "level",
+              "example_usage": "Each resource must have a skill proficiency level assigned"
+            },
+            {
+              "name": "maintenance schedule compliance",
+              "description": "维护计划符合性",
+              "unit": "compliance status",
+              "example_usage": "Each resource requires maintenance schedule compliance"
+            },
+            {
+              "name": "environmental impact score",
+              "description": "环境影响评分",
+              "unit": "score",
+              "example_usage": "Each resource has an environmental impact score"
+            },
+            {
+              "name": "cost per unit",
+              "description": "单位成本",
+              "unit": "currency",
+              "example_usage": "Each resource is associated with a cost per unit"
+            },
+            {
+              "name": "lead time",
+              "description": "前置时间",
+              "unit": "days",
+              "example_usage": "Each resource has a lead time for procurement"
+            }
+          ]
+        }
+      },
+      "generic_attributes": [
+        {
+          "name": "capacity",
+          "description": "容量",
+          "unit": "units",
+          "example_usage": "Each entity has a specific capacity for resource handling."
+        },
+        {
+          "name": "cost per unit",
+          "description": "单位成本",
+          "unit": "currency per unit",
+          "example_usage": "The cost per unit is considered when allocating resources to minimize expenses."
+        },
+        {
+          "name": "availability",
+          "description": "可用性",
+          "unit": "percentage",
+          "example_usage": "Entity availability determines how often it can be allocated to tasks."
+        }
+      ]
+    }
+  }
+}
