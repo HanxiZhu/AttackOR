@@ -4,7 +4,7 @@
 
 Hanxi Zhu, Jingru Yu, Yan Teng, Jian Wang, Yi Yu · **COLM 2026（The Third Conference on Language Modeling）**
 
-[论文 PDF](https://hanxizhu.github.io/attackor-project-page/assets/attack_or_colm2026.pdf) · [OpenReview](https://openreview.net/forum?id=jT4fTtBw3F) · [项目网页](https://hanxizhu.github.io/attackor-project-page/) · [English README](README_EN.md)
+[论文 PDF](https://hanxizhu.github.io/attackor-project-page/assets/attack_or_colm2026.pdf) · [Poster PDF](assets/AttackOR_COLM2026_Poster.pdf) · [OpenReview](https://openreview.net/forum?id=jT4fTtBw3F) · [项目网页](https://hanxizhu.github.io/attackor-project-page/) · [English README](README_EN.md)
 
 会议海报展示：[Poster Session 1，Imperial Ballroom，#11](https://colm.eventhosts.cc/Conferences/2026/AcceptedPapers)。
 
