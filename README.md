@@ -1,12 +1,26 @@
-# Attack_OR
+# AttackOR
 
-**中文说明（本页）**：对抗性优化推理训练项目（攻击生成 / SFT / GRPO）。
+**Are LLMs Robust Enough for Operations Research? An Adversarial Attack and Defense Study via AttackOR**
 
-**English**: see `README_EN.md`.
+Hanxi Zhu, Jingru Yu, Yan Teng, Jian Wang, Yi Yu · **COLM 2026（The Third Conference on Language Modeling）**
 
----
+[论文 PDF](https://hanxizhu.github.io/attackor-project-page/assets/attack_or_colm2026.pdf) · [OpenReview](https://openreview.net/forum?id=jT4fTtBw3F) · [项目网页](https://hanxizhu.github.io/attackor-project-page/) · [English README](README_EN.md)
 
-# Attack_OR: 对抗性优化推理训练项目
+会议海报展示：[Poster Session 1，Imperial Ballroom，#11](https://colm.eventhosts.cc/Conferences/2026/AcceptedPapers)。
+
+## 引用
+
+```bibtex
+@inproceedings{zhu2026attackor,
+  title={Are {LLMs} Robust Enough for Operations Research? An Adversarial Attack and Defense Study via {AttackOR}},
+  author={Zhu, Hanxi and Yu, Jingru and Teng, Yan and Wang, Jian and Yu, Yi},
+  booktitle={The Third Conference on Language Modeling},
+  year={2026},
+  url={https://openreview.net/forum?id=jT4fTtBw3F}
+}
+```
+
+## 项目简介
 
 本项目整合了针对运筹学问题的对抗攻击生成、SFT训练和GRPO强化学习训练的完整流程。
 
@@ -187,4 +201,3 @@ pip install -e .
 ## License
 
 Apache 2.0
-# AttackOR

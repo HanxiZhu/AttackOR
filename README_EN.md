@@ -1,4 +1,26 @@
-# Attack_OR: Adversarial Optimization-Reasoning Training
+# AttackOR
+
+**Are LLMs Robust Enough for Operations Research? An Adversarial Attack and Defense Study via AttackOR**
+
+Hanxi Zhu, Jingru Yu, Yan Teng, Jian Wang, Yi Yu · **COLM 2026 (The Third Conference on Language Modeling)**
+
+[Paper PDF](https://hanxizhu.github.io/attackor-project-page/assets/attack_or_colm2026.pdf) · [OpenReview](https://openreview.net/forum?id=jT4fTtBw3F) · [Project page](https://hanxizhu.github.io/attackor-project-page/) · [中文 README](README.md)
+
+Conference poster presentation: [Poster Session 1, Imperial Ballroom, #11](https://colm.eventhosts.cc/Conferences/2026/AcceptedPapers).
+
+## Citation
+
+```bibtex
+@inproceedings{zhu2026attackor,
+  title={Are {LLMs} Robust Enough for Operations Research? An Adversarial Attack and Defense Study via {AttackOR}},
+  author={Zhu, Hanxi and Yu, Jingru and Teng, Yan and Wang, Jian and Yu, Yi},
+  booktitle={The Third Conference on Language Modeling},
+  year={2026},
+  url={https://openreview.net/forum?id=jT4fTtBw3F}
+}
+```
+
+## Overview
 
 This project provides an end-to-end pipeline for **adversarial attack generation** on Operations Research (OR) / optimization problems, followed by **SFT fine-tuning** and **GRPO reinforcement learning** training.
 
@@ -181,4 +203,3 @@ pip install -e .
 ## License
 
 Apache 2.0
-
